@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Isbha Rahman | Software Engineering Student</title>
+  <meta name="description" content="Portfolio of Isbha Rahman - Passionate Software Engineering Student" />
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    :root {
+      --gold: #d4af37;
+      --gold-dark: #b5941e;
+      --black: #0f0f0f;
+      --gray-dark: #1a1a1a;
+    }
+    body {
+      background-color: var(--black);
+      color: #e5e5e5;
+    }
+    .bg-primary { background-color: var(--gray-dark); }
+    .text-gold { color: var(--gold); }
+    .border-gold { border-color: var(--gold); }
+    .hover-gold:hover { color: var(--gold); }
+    .bg-gold { background-color: var(--gold); }
+    .bg-gold-hover:hover { background-color: var(--gold); }
+    .text-gradient {
+      background: linear-gradient(to right, #f0d68c, #d4af37, #b5941e);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .card-hover:hover {
+      border-color: var(--gold);
+      box-shadow: 0 10px 30px -10px rgba(212, 175, 55, 0.3);
+    }
+    .hero-video {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+    .hero-overlay {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(15, 15, 15, 0.65);
+      z-index: -1;
+    }
+  </style>
+</head>
+<body class="min-h-screen">
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-sm border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <span class="text-xl font-bold text-gold">Isbha Rahman</span>
+        <div class="hidden md:flex space-x-8">
+          <a href="#home" class="text-sm font-medium text-gray-300 hover-gold transition">Home</a>
+          <a href="#about" class="text-sm font-medium text-gray-300 hover-gold transition">About</a>
+          <a href="#education" class="text-sm font-medium text-gray-300 hover-gold transition">Education</a>
+          <a href="#skills" class="text-sm font-medium text-gray-300 hover-gold transition">Skills</a>
+          <a href="#projects" class="text-sm font-medium text-gray-300 hover-gold transition">Projects</a>
+          <a href="#achievements" class="text-sm font-medium text-gray-300 hover-gold transition">Achievements</a>
+          <a href="#goals" class="text-sm font-medium text-gray-300 hover-gold transition">Goals</a>
+          <a href="#contact" class="text-sm font-medium text-gray-300 hover-gold transition">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- Hero Section with Local Background Video -->
+  <section id="home" class="min-h-screen flex items-center justify-center relative pt-16 overflow-hidden">
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="assets/bg.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="relative z-10 text-center px-4">
+      <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 text-gradient">
+        Isbha Rahman
+      </h1>
+      <p class="text-2xl sm:text-3xl text-gray-300 mb-8">
+        Software Engineering Student
+      </p>
+      <p class="text-lg text-gray-400 max-w-2xl mx-auto mb-10">
+        Building innovative solutions | Passionate about AI, Robotics & Software Development
+      </p>
+      <div class="flex flex-col sm:flex-row gap-6 justify-center">
+        <a href="#projects" class="px-10 py-4 bg-gold text-black font-semibold rounded-lg hover:bg-gold-dark transition">
+          View Projects
+        </a>
+        <a href="#contact" class="px-10 py-4 border border-gold text-gold font-semibold rounded-lg hover:bg-gold hover:text-black transition">
+          Contact Me
+        </a>
+        <a href="https://www.youtube.com/watch?v=OA5PEzPdtdU" target="_blank" class="px-10 py-4 border border-gold text-gold font-semibold rounded-lg hover:bg-gold hover:text-black transition flex items-center justify-center gap-2">
+          <i data-lucide="video" class="w-5 h-5"></i>
+          Video Resume
+        </a>
+      </div>
+      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+        <i data-lucide="chevron-down" class="w-8 h-8 text-gold"></i>
+      </div>
+    </div>
+  </section>
+  <!-- About Me -->
+  <section id="about" class="py-20 bg-primary">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-4xl font-bold text-center text-gold mb-12">About Me</h2>
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <!-- Your Profile Photo -->
+        <div class="w-full h-96 rounded-xl overflow-hidden">
+          <img src="assets/me.jpg" alt="Isbah Rahman" class="w-full h-full object-cover">
+        </div>
+        <div class="space-y-6">
+          <p class="text-lg leading-relaxed">
+            I am a dedicated Software Engineering student with a strong passion for technology, robotics, and artificial intelligence.
+            My journey in tech has equipped me with solid programming skills, problem-solving abilities, and hands-on experience through projects and competitions.
+          </p>
+          <p class="text-lg leading-relaxed">
+            I thrive in collaborative environments, love learning new tools and frameworks, and aim to build impactful solutions that solve real-world problems.
+          </p>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="flex items-center gap-3"><i data-lucide="code" class="w-6 h-6 text-gold"></i><span>Problem Solver</span></div>
+            <div class="flex items-center gap-3"><i data-lucide="robot" class="w-6 h-6 text-gold"></i><span>Robotics Enthusiast</span></div>
+            <div class="flex items-center gap-3"><i data-lucide="brain" class="w-6 h-6 text-gold"></i><span>AI Learner</span></div>
+            <div class="flex items-center gap-3"><i data-lucide="target" class="w-6 h-6 text-gold"></i><span>Goal-Oriented</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Education -->
+  <section id="education" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-4xl font-bold text-center text-gold mb-12">Education</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-primary border border-gray-700 rounded-xl p-6 card-hover">
+          <div class="w-14 h-14 bg-gold/10 rounded-lg flex items-center justify-center mb-4">
+            <i data-lucide="graduation-cap" class="w-8 h-8 text-gold"></i>
+          </div>
+          <h3 class="text-xl font-bold">SSC</h3>
+          <p class="text-gray-400">Secondary School Certificate</p>
+          <div class="mt-4 text-3xl font-bold text-gold">GPA 4.83</div>
+          <p class="text-gray-400">Out of 5.00</p>
+        </div>
+        <div class="bg-primary border border-gray-700 rounded-xl p-6 card-hover">
+          <div class="w-14 h-14 bg-gold/10 rounded-lg flex items-center justify-center mb-4">
+            <i data-lucide="graduation-cap" class="w-8 h-8 text-gold"></i>
+          </div>
+          <h3 class="text-xl font-bold">HSC</h3>
+          <p class="text-gray-400">Higher Secondary Certificate</p>
+          <div class="mt-4 text-3xl font-bold text-gold">GPA 3.25</div>
+          <p class="text-gray-400">Out of 5.00</p>
+        </div>
+        <div class="bg-primary border border-gray-700 rounded-xl p-6 card-hover">
+          <div class="w-14 h-14 bg-gold/10 rounded-lg flex items-center justify-center mb-4">
+            <i data-lucide="graduation-cap" class="w-8 h-8 text-gold"></i>
+          </div>
+          <h3 class="text-xl font-bold">B.Sc. in Software Engineering</h3>
+          <p class="text-gray-400">Daffodil International University</p>
+          <div class="mt-4 text-3xl font-bold text-gold">Ongoing</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Skills -->
+  <section id="skills" class="py-20 bg-primary">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-4xl font-bold text-center text-gold mb-12">Skills & Expertise</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-gray-dark border border-gray-700 rounded-xl p-6">
+          <h3 class="text-xl font-bold mb-4">Programming Languages</h3>
+          <div class="flex flex-wrap gap-3">
+            <span class="px-5 py-2 bg-gold/10 text-gold rounded-full">Java</span>
+            <span class="px-5 py-2 bg-gold/10 text-gold rounded-full">Python</span>
+            <span class="px-5 py-2 bg-gold/10 text-gold rounded-full">JavaScript</span>
+            <span class="px-5 py-2 bg-gold/10 text-gold rounded-full">TypeScript</span>
+            <span class="px-5 py-2 bg-gold/10 text-gold rounded-full">C++</span>
+            <span class="px-5 py-2 bg-gold/10 text-gold rounded-full">C</span>
+            <span class="px-5 py-2 bg-gold/10 text-gold rounded-full">SQL</span>
+          </div>
+        </div>
+        <div class="bg-gray-dark border border-gray-700 rounded-xl p-6">
+          <h3 class="text-xl font-bold mb-4">Web & Tools</h3>
+          <div class="flex flex-wrap gap-3">
+            <span class="px-5 py-2 bg-gold/10 text-gold rounded-full">React</span>
+            <span class="px-5 py-2 bg-gold/10 text-gold rounded-full">Node.js</span>
+            <span class="px-5 py-2 bg-gold/10 text-gold rounded-full">Tailwind</span>
+            <span class="px-5 py-2 bg-gold/10 text-gold rounded-full">Git</span>
+            <span class="px-5 py-2 bg-gold/10 text-gold rounded-full">Docker</span>
+            <span class="px-5 py-2 bg-gold/10 text-gold rounded-full">Firebase</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Projects -->
+  <section id="projects" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-4xl font-bold text-center text-gold mb-12">Featured Projects</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-primary border border-gray-700 rounded-xl p-6 card-hover">
+          <h3 class="text-xl font-bold">E-Commerce Platform</h3>
+          <p class="text-gray-400 text-sm mt-1">Full-stack web app</p>
+          <p class="my-4 text-gray-300">Online shopping system with auth, cart & payment.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 border border-gold text-gold rounded text-sm">React</span>
+            <span class="px-3 py-1 border border-gold text-gold rounded text-sm">Node.js</span>
+            <span class="px-3 py-1 border border-gold text-gold rounded text-sm">MongoDB</span>
+          </div>
+        </div>
+        <div class="bg-primary border border-gray-700 rounded-xl p-6 card-hover">
+          <h3 class="text-xl font-bold">Task Management System</h3>
+          <p class="text-gray-400 text-sm mt-1">Real-time collaboration</p>
+          <p class="my-4 text-gray-300">Team productivity tool with live updates.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 border border-gold text-gold rounded text-sm">TypeScript</span>
+            <span class="px-3 py-1 border border-gold text-gold rounded text-sm">React</span>
+            <span class="px-3 py-1 border border-gold text-gold rounded text-sm">Firebase</span>
+          </div>
+        </div>
+        <div class="bg-primary border border-gray-700 rounded-xl p-6 card-hover">
+          <h3 class="text-xl font-bold">Robotics Project</h3>
+          <p class="text-gray-400 text-sm mt-1">Autonomous Line Follower Robot</p>
+          <p class="my-4 text-gray-300">Built an autonomous robot using Arduino that follows lines and avoids obstacles.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 border border-gold text-gold rounded text-sm">Arduino</span>
+            <span class="px-3 py-1 border border-gold text-gold rounded text-sm">C++</span>
+            <span class="px-3 py-1 border border-gold text-gold rounded text-sm">Sensors</span>
+          </div>
+        </div>
+        <div class="bg-primary border border-gray-700 rounded-xl p-6 card-hover">
+          <h3 class="text-xl font-bold">Bus Ticket Management System</h3>
+          <p class="text-gray-400 text-sm mt-1">Desktop Application</p>
+          <p class="my-4 text-gray-300">Java-based system for booking, managing and tracking bus tickets with admin panel.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 border border-gold text-gold rounded text-sm">Java</span>
+            <span class="px-3 py-1 border border-gold text-gold rounded text-sm">MySQL</span>
+            <span class="px-3 py-1 border border-gold text-gold rounded text-sm">Swing</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Achievements with Your Photos -->
+  <section id="achievements" class="py-20 bg-primary">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-4xl font-bold text-center text-gold mb-12">Achievements & Certifications</h2>
+      <div class="grid md:grid-cols-2 gap-12">
+        <div class="bg-gray-dark border border-gold rounded-xl p-8 card-hover text-center">
+          <i data-lucide="trophy" class="w-20 h-20 text-gold mx-auto mb-6"></i>
+          <h3 class="text-2xl font-bold mb-4">1st Place - Robotics Competition</h3>
+          <p class="text-gray-300 mb-8">Won first place in inter-university/institutional robotics competition.</p>
+          <div class="rounded-xl overflow-hidden h-80">
+            <img src="assets/photo1.jpg" alt="Robotics Competition Trophy" class="w-full h-full object-cover">
+          </div>
+        </div>
+        <div class="bg-gray-dark border border-gray-700 rounded-xl p-8 card-hover text-center">
+          <i data-lucide="award" class="w-20 h-20 text-gold mx-auto mb-6"></i>
+          <h3 class="text-2xl font-bold mb-4">Artificial Intelligence</h3>
+          <p class="text-gray-400 mb-2">GoEdu Certification</p>
+          <p class="text-gray-300 mb-8">Completed comprehensive AI course covering machine learning fundamentals.</p>
+          <div class="rounded-xl overflow-hidden h-80">
+            <img src="assets/photo2.jpg" alt="AI Certification" class="w-full h-full object-cover">
+          </div>
+        </div>
+        <div class="bg-gray-dark border border-gray-700 rounded-xl p-8 card-hover text-center">
+          <i data-lucide="award" class="w-20 h-20 text-gold mx-auto mb-6"></i>
+          <h3 class="text-2xl font-bold mb-4">Software Testing</h3>
+          <p class="text-gray-400 mb-2">Professional Certification</p>
+          <p class="text-gray-300 mb-8">Certified in manual and automated software testing methodologies.</p>
+          <div class="rounded-xl overflow-hidden h-80">
+            <img src="assets/photo3.jpg" alt="Software Testing Certificate" class="w-full h-full object-cover">
+          </div>
+        </div>
+        <div class="bg-gray-dark border border-gray-700 rounded-xl p-8 card-hover text-center">
+          <i data-lucide="award" class="w-20 h-20 text-gold mx-auto mb-6"></i>
+          <h3 class="text-2xl font-bold mb-4">Object Oriented Programming</h3>
+          <p class="text-gray-400 mb-2">Professional Certification</p>
+          <p class="text-gray-300 mb-8">Completed in-depth course on OOP principles, design patterns, and best practices in Java and other languages.</p>
+          <div class="rounded-xl overflow-hidden h-80">
+            <img src="assets/photo4.jpg" alt="Object Oriented Programming Certificate" class="w-full h-full object-cover">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Goals -->
+  <section id="goals" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-4xl font-bold text-center text-gold mb-12">Career Goals</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-primary border border-gray-700 rounded-xl p-6 card-hover text-center">
+          <i data-lucide="briefcase" class="w-12 h-12 text-gold mx-auto mb-4"></i>
+          <h3 class="text-xl font-bold">Software Engineer</h3>
+          <p class="text-gray-300 mt-3">Join a leading tech company</p>
+        </div>
+        <div class="bg-primary border border-gray-700 rounded-xl p-6 card-hover text-center">
+          <i data-lucide="graduation-cap" class="w-12 h-12 text-gold mx-auto mb-4"></i>
+          <h3 class="text-xl font-bold">Master's Abroad</h3>
+          <p class="text-gray-300 mt-3">Pursue advanced studies in AI/CS</p>
+        </div>
+        <div class="bg-primary border border-gray-700 rounded-xl p-6 card-hover text-center">
+          <i data-lucide="rocket" class="w-12 h-12 text-gold mx-auto mb-4"></i>
+          <h3 class="text-xl font-bold">Tech Startup</h3>
+          <p class="text-gray-300 mt-3">Build innovative solutions in Bangladesh</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contact -->
+<section id="contact" class="py-20 bg-primary">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-4xl font-bold text-center text-gold mb-12">Get In Touch</h2>
+    <div class="grid md:grid-cols-2 gap-12">
+      <div class="space-y-8">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-gold/10 rounded-lg flex items-center justify-center">
+            <i data-lucide="mail" class="w-6 h-6 text-gold"></i>
+          </div>
+          <div>
+            <p class="text-sm text-gray-400">Email</p>
+            <a href="mailto:rahman35-1030@diu.edu.bd" class="text-lg hover-gold">rahman35-1030@diu.edu.bd</a>
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-gold/10 rounded-lg flex items-center justify-center">
+            <i data-lucide="phone" class="w-6 h-6 text-gold"></i>
+          </div>
+          <div>
+            <p class="text-sm text-gray-400">Phone</p>
+            <p class="text-lg">+880 1879276073</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-gold/10 rounded-lg flex items-center justify-center">
+            <i data-lucide="github" class="w-6 h-6 text-gold"></i>
+          </div>
+          <div>
+            <p class="text-sm text-gray-400">GitHub</p>
+            <a href="https://github.com/Isbah1030" target="_blank" class="text-lg hover-gold">github.com/Isbah1030</a>
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-gold/10 rounded-lg flex items-center justify-center">
+            <i data-lucide="video" class="w-6 h-6 text-gold"></i>
+          </div>
+          <div>
+            <p class="text-sm text-gray-400">Video Resume</p>
+            <a href="https://www.youtube.com/watch?v=OA5PEzPdtdU" target="_blank" class="text-lg hover-gold">Watch on YouTube</a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-2xl font-bold mb-6 text-gold">Send a Message</h3>
+        <form class="space-y-5">
+          <input 
+            type="text" 
+            placeholder="Your Name" 
+            class="w-full px-5 py-4 bg-white border border-gray-300 rounded-lg focus:border-gold focus:outline-none text-black placeholder-gray-500" 
+            required 
+          />
+          <input 
+            type="email" 
+            placeholder="Your Email" 
+            class="w-full px-5 py-4 bg-white border border-gray-300 rounded-lg focus:border-gold focus:outline-none text-black placeholder-gray-500" 
+            required 
+          />
+          <textarea 
+            rows="6" 
+            placeholder="Your Message" 
+            class="w-full px-5 py-4 bg-white border border-gray-300 rounded-lg focus:border-gold focus:outline-none text-black placeholder-gray-500 resize-none" 
+            required
+          ></textarea>
+          <button type="submit" class="w-full py-4 bg-gold text-black font-bold rounded-lg hover:bg-gold-dark transition flex items-center justify-center gap-2">
+            <i data-lucide="send" class="w-5 h-5"></i>
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- Footer -->
+  <footer class="py-8 border-t border-gray-800">
+    <div class="text-center text-gray-400">
+      <p>&copy; 2025 Isbha Rahman. All rights reserved.</p>
+      <p class="text-sm mt-2">Built with passion using HTML, Tailwind & Lucide</p>
+    </div>
+  </footer>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
